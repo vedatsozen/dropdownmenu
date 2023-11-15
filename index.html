@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROPDOWN MENU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+    
+<ul class="first" id="firstul">
+
+<li id="gunler">Günler</li>
+<li>Pazartesi</li>
+<li>Salı</li>
+<li>Çarşamba</li>
+<li>Perşembe</li>
+<li>Cuma</li>
+<li>Cumartesi</li>
+<li>Pazar</li>
+
+</ul>
+
+<ul class="second" id="secondul">
+
+    <li id="aylar">Aylar</li>
+    <li>Ocak</li>
+    <li>Şubat</li>
+    <li>Mart</li>
+    <li>Nisan</li>
+    <li>Mayıs</li>
+    <li>Haziran</li>
+    <li>Temmuz</li>
+    <li>Ağustos</li>
+    <li>Eylül</li>
+    <li>Ekim</li>
+    <li>Kasım</li>
+    <li>Aralık</li>
+  
+    
+    </ul>
+
+</div>
+
+<h1>Bu bir dropdown menü örneğidir.</h1>
+
+<a href="https://vedatsozen.netlify.app" target="_blank">Coded by Vedat Sözen</a>
+
+</body>
+
+<script>
+
+let gunler = document.getElementById("gunler");
+let aylar = document.getElementById("aylar");
+
+let allli = document.querySelectorAll(".first li");
+let allli2 = document.querySelectorAll(".second li");
+
+let firstul = document.getElementById("firstul");
+let secondul = document.getElementById("secondul");
+
+
+for ( let li of allli ) {
+    gunler.addEventListener("mouseover", function() {
+    li.classList.add("showmenu");
+    })
+
+    firstul.addEventListener("mouseleave",function() {
+    li.classList.remove("showmenu");
+    })
+
+}
+
+
+for ( let li of allli2 ) {
+    aylar.addEventListener("mouseover", function() {
+    li.classList.toggle("showmenu");
+    })
+
+    secondul.addEventListener("mouseleave",function() {
+    li.classList.remove("showmenu");
+    })
+}
+
+
+
+
+
+</script>
+</html>
